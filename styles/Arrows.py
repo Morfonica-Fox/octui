@@ -1,0 +1,43 @@
+class Arrow:
+    up = '↑'
+    down = '↓'
+    left = '←'
+    right = '→'
+    left_up = '↖'
+    right_up = '↗'
+    left_down = '↙'
+    right_down = '↘'
+    left_right = '↔'
+    up_down = '↕'
+
+class DoubleArrow(Arrow):
+    up = '⇑'
+    down = '⇓'
+    left = '⇐'
+    right = '⇒'
+    left_up = '⇖'
+    right_up = '⇗'
+    left_down = '⇙'
+    right_down = '⇘'
+    left_right = '⇔'
+    up_down = '⇕'
+
+class Delta(Arrow):
+    up = '▲'
+    down = '▼'
+    left = '◀'
+    right = '▶'
+    left_up = '◤'
+    right_up = '◥'
+    left_down = '◣'
+    right_down = '◢'
+    left_right = '◆'
+    up_down = '♦'
+
+class DeltaEmpty(Delta):
+    up = '△'
+    down = '▽'
+    left = '◁'
+    right = '▷'
+    left_right = '◇'
+    up_down = '♢'

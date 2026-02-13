@@ -1,0 +1,55 @@
+import styledANSI
+
+maps = {
+    "reset": styledANSI.Style.RESET,
+    "bold": styledANSI.Style.BOLD,
+    "dim": styledANSI.Style.DIM,
+    "italic": styledANSI.Style.ITALIC,
+    "underline": styledANSI.Style.UNDERLINE,
+    "blink": styledANSI.Style.BLINK,
+    "quickly_blink": styledANSI.Style.QUICKLY_BLINK,
+    "hidden": styledANSI.Style.HIDDEN,
+    "delete": styledANSI.Style.DELETE,
+    "reverse": styledANSI.Style.REVERSE,
+    "canecl_reverse": styledANSI.Style.CANECL_REVERSE,
+    "canecl_underline": styledANSI.Style.CANECL_UNDERLINE,
+    "canecl_blink": styledANSI.Style.CANECL_BLINK,
+    "canecl_upline": styledANSI.Style.CANECL_UPLINE,
+    "canecl_bold": styledANSI.Style.CANECL_BOLD,
+    "fg_black": styledANSI.Foreground.BLACK,
+    "fg_red": styledANSI.Foreground.RED,
+    "fg_green": styledANSI.Foreground.GREEN,
+    "fg_yellow": styledANSI.Foreground.YELLOW,
+    "fg_blue": styledANSI.Foreground.BLUE,
+    "fg_magenta": styledANSI.Foreground.MAGENTA,
+    "fg_cyan": styledANSI.Foreground.CYAN,  
+    "fg_white": styledANSI.Foreground.WHITE,
+    "fg_light_black": styledANSI.Foreground.LIGHT_BLACK,
+    "fg_light_red": styledANSI.Foreground.LIGHT_RED,
+    "fg_light_green": styledANSI.Foreground.LIGHT_GREEN,
+    "fg_light_yellow": styledANSI.Foreground.LIGHT_YELLOW,
+    "fg_light_blue": styledANSI.Foreground.LIGHT_BLUE,
+    "fg_light_magenta": styledANSI.Foreground.LIGHT_MAGENTA,
+    "fg_light_cyan": styledANSI.Foreground.LIGHT_CYAN,
+    "fg_light_white": styledANSI.Foreground.LIGHT_WHITE,
+    "fg_reset": styledANSI.Foreground.RESET,
+    "bg_black": styledANSI.Background.BLACK,    
+    "bg_red": styledANSI.Background.RED,
+    "bg_green": styledANSI.Background.GREEN,
+    "bg_yellow": styledANSI.Background.YELLOW,    
+    "bg_blue": styledANSI.Background.BLUE,
+    "bg_magenta": styledANSI.Background.MAGENTA,
+    "bg_cyan": styledANSI.Background.CYAN,
+    "bg_white": styledANSI.Background.WHITE,
+    "bg_light_black": styledANSI.Background.LIGHT_BLACK,    
+    "bg_light_red": styledANSI.Background.LIGHT_RED,
+    "bg_light_green": styledANSI.Background.LIGHT_GREEN,
+    "bg_light_yellow": styledANSI.Background.LIGHT_YELLOW,
+    "bg_light_blue": styledANSI.Background.LIGHT_BLUE,
+    "bg_light_magenta": styledANSI.Background.LIGHT_MAGENTA
+}
+
+def map_text(text: str) -> str:
+    for key, value in maps.items():
+        text = text.replace(f"<{key}>", value)
+    return text
